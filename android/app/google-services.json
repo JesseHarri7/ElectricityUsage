@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "698351693923",
+    "project_id": "electricityusage-32cb1",
+    "storage_bucket": "electricityusage-32cb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698351693923:android:9fce4f84e3e6582ce80856",
+        "android_client_info": {
+          "package_name": "com.Ninja.electricity_usage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698351693923-v9967gq27cb4cio5vqh84jc6alat2l75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFBQe8VSfT_Pkoac6prP3iPiqjzqL8w3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698351693923-v9967gq27cb4cio5vqh84jc6alat2l75.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
