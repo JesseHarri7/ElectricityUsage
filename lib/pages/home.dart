@@ -7,6 +7,7 @@ import 'package:flutter/scheduler.dart';
 import '../components/user_card.dart';
 import '../entities/MeterReading.dart';
 import '../services/database.dart';
+import 'SimpleTimeSeriesChartExample.dart';
 import 'add_user_page.dart';
 
 class Home extends StatefulWidget {
@@ -86,6 +87,35 @@ class _HomeState extends State<Home> {
                     });
                   },
                   child: Icon(Icons.add),
+                ),
+                bottomNavigationBar: Container(
+                  height: 56,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 16,
+                        right: 16,
+                        bottom: 5,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (BuildContext context) {
+                                  return SimpleTimeSeriesChartExample();
+                                },
+                                settings: RouteSettings(
+                                  arguments: MeterReading.fromMapList(snapshot.data),
+                                ),
+                              ),
+                            );
+                            // Navigator.pushNamed(context, '/chart');
+                          },
+                          child: Text('Unit graph'),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               );
             }

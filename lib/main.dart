@@ -1,3 +1,4 @@
+import 'package:electricity_usage/pages/SimpleTimeSeriesChartExample.dart';
 import 'package:electricity_usage/pages/add_user_page.dart';
 import 'package:electricity_usage/pages/loading.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         // '/home' : (context) => Home(),
         '/add' : (context) => AddUserPage(),
+        '/chart' : (context) => SimpleTimeSeriesChartExample(),
       },
     );
 

@@ -32,4 +32,13 @@ class MeterReading {
     );
   }
 
+  static List<MeterReading> fromMapList(List<QueryDocumentSnapshot<Object?>>? queries) {
+    List<MeterReading> returnMeterReadings = <MeterReading>[];
+    for(QueryDocumentSnapshot<Object?> query in queries!) {
+      returnMeterReadings.add(fromMap(query));
+    }
+
+    return returnMeterReadings;
+  }
+
 }
