@@ -28,7 +28,16 @@ class _AddUserPageState extends State<AddUserPage> {
 
   @override
   Widget build(BuildContext context) {
-    final MeterReading meterReading = ModalRoute.of(context)?.settings.arguments as MeterReading;
+    MeterReading? meterReading = null;
+    try {
+      meterReading = ModalRoute
+          .of(context)
+          ?.settings
+          .arguments as MeterReading;
+    }catch (e){
+      print("This is null but ignore it");
+    }
+
     var widgetText = 'Add Meter Reading';
 
     if (meterReading != null) {

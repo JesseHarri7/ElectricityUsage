@@ -3,15 +3,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class MeterReading {
 
-  String id = "";
+  late String id;
 
   final Timestamp date;
   final int units;
   final int amountSpent;
   final int kWhRecharged;
 
-  MeterReading({required this.date, required this.units, required this.amountSpent, required this.kWhRecharged, String? id});
-  // MeterReading dbConst({required this.id, required this.date, required this.units, required this.amountSpent, required this.kWhRecharged});
+  MeterReading({required this.date, required this.units, required this.amountSpent, required this.kWhRecharged, required this.id});
 
   Map<String, dynamic> toMap() {
     return {
