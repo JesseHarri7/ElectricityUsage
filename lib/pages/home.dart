@@ -8,7 +8,7 @@ import '../components/user_card.dart';
 import '../entities/MeterReading.dart';
 import '../services/database.dart';
 import 'SimpleTimeSeriesChartExample.dart';
-import 'add_user_page.dart';
+import 'add_meterReading_page.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
                             context,
                             MaterialPageRoute(
                               builder: (BuildContext context) {
-                                return AddUserPage();
+                                return AddMeterReadingPage();
                               },
                               settings: RouteSettings(
                                 arguments: MeterReading.fromMap(snapshot.data![index]),

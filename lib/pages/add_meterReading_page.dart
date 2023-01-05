@@ -5,12 +5,12 @@ import 'package:intl/intl.dart';
 
 import '../services/database.dart';
 
-class AddUserPage extends StatefulWidget {
+class AddMeterReadingPage extends StatefulWidget {
   @override
-  _AddUserPageState createState() => _AddUserPageState();
+  _AddMeterReadingPageState createState() => _AddMeterReadingPageState();
 }
 
-class _AddUserPageState extends State<AddUserPage> {
+class _AddMeterReadingPageState extends State<AddMeterReadingPage> {
   TextEditingController dateController = TextEditingController();
   TextEditingController unitsController = TextEditingController();
   TextEditingController amountSpentController = TextEditingController();
@@ -46,7 +46,7 @@ class _AddUserPageState extends State<AddUserPage> {
       amountSpentController.text = meterReading.amountSpent.toString();
       kWhRechargedController.text = meterReading.kWhRecharged.toString();
 
-      widgetText = 'Update User';
+      widgetText = 'Update Meter Reading';
     }
     return Scaffold(
       appBar: AppBar(

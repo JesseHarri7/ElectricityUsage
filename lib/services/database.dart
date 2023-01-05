@@ -13,7 +13,15 @@ class Database {
   }
 
   static Future<List<QueryDocumentSnapshot<Object?>>> readDocuments() async {
-    QuerySnapshot snapshot = await FirebaseFirestore.instance.collection(COLLECTION).get();
+    QuerySnapshot snapshot = await FirebaseFirestore.instance
+        .collection(COLLECTION)
+        .orderBy('date')
+        .get();
+
+    List<DocumentSnapshot> documents = snapshot.docs;
+
+    documents.sort((a, b) => a.get('date').compareTo(b.get('date')));
+
     return snapshot.docs;
   }
 
